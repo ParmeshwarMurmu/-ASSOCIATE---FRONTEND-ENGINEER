@@ -3,8 +3,25 @@ import style from '../CSS/Login.module.css'
 import { FcGoogle } from "react-icons/fc";
 import { Button, ButtonGroup } from '@chakra-ui/react'
 import logo from '../Assets/Logo.png'
-// flex justify-center items-center
+import axios from 'axios';
+
+
 const Login = () => {
+    
+    const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImVtYWlsIjoibXVybXVwYXJtZXNod2FyMDVAZ21haWwuY29tIiwiaWQiOjgsImZpcnN0TmFtZSI6IlBhcm1lc2h3YXIiLCJsYXN0TmFtZSI6Ik11cm11In0sImlhdCI6MTcxMTE3ODkxMywiZXhwIjoxNzQyNzE0OTEzfQ.P_fFmshplrW9nfPcUxC_olAv1nz0IauEnSpZNq4CCQk'
+
+    // Function to handle loging through google
+    const signUpUsingGoogleHandler = ()=>{
+        // alert('google')
+        axios.get(`https://hiring.reachinbox.xyz/api/v1/auth/google-login?redirect_to=https://localhost:3000/`)
+        .then((res)=>{
+            console.log(res);
+        })
+        .catch((err)=>{
+            console.log(err);
+        })
+
+    }
     return (
         <div className={` bg-black`}>
 
@@ -21,7 +38,7 @@ const Login = () => {
                         <div className={`rounded-4 ${style.signUpwithGoogleBtn}`}>
 
 
-                            <Button className='w-full h-48 px-8 pl-99 pr-99' variant={'none'} colorScheme='teal'>
+                            <Button className='w-full h-48 px-8 pl-99 pr-99' variant={'none'} colorScheme='teal' onClick={signUpUsingGoogleHandler} >
                                 <FcGoogle className='h-32 w-23 mr-12' /><p className=' text-signUpWithGoogle leading-26 font-normal text-16'>Sign Up with Google</p>
                             </Button>
                         </div>

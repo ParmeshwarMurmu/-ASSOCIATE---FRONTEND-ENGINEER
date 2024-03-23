@@ -16,7 +16,8 @@ module.exports = {
       navigationBackgroundColor: '#1F1F1F',
       // navigationBackgroundColor: '#343A40'
       themeBackgroundColor: '#222426',
-      messageIllustrationColor: '#9E9E9E'
+      messageIllustrationColor: '#9E9E9E',
+      eventBackgroundColor: '#2F3030',
     },
 
     fontFamily:{
@@ -55,6 +56,8 @@ module.exports = {
 
       },
       inset: {
+        '57': '32px',
+        '65': '-68px'
        
 
         
@@ -123,7 +126,7 @@ module.exports = {
         '22': '22px',
         '16': '16px',
         '693': '696px',
-        '392': '392.4px',
+        '392': '391.4px',
         '229': '229.4px',
         '115': '115px',
         '37': '37px',

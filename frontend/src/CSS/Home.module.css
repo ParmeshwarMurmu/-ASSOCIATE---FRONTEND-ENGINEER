@@ -1,7 +1,14 @@
 .theme{
+    /* border: 1px solid #fc3030 */
     border: 1px solid #343A40
 }
 
 .cont{
-    border: 1px solid #101113;
+    /* border: 1px solid #101113; */
+    border: 1px solid #fc3030
+}
+
+.tablist{
+    border: 1px solid #f3ff05;
+   
 }

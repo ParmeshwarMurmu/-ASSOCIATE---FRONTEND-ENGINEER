@@ -1,9 +1,41 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Sidebar from '../Components/Sidebar'
 import Navigation from '../Components/Navigation'
-import InboxContent from '../Components/InboxContent'
+import InboxContent from '../Components/InboxContent';
+import { useParams } from 'react-router-dom'
 
-const Home = () => {
+
+const Home = ({children}) => {
+  let { onebox } = useParams();
+
+  console.log(onebox, "onebox")
+  
+
+    // State to hold the token
+    const [token, setToken] = useState('');
+    
+    let authToken = JSON.parse(localStorage.getItem('onebox'))
+
+    useEffect(() => {
+      // Function to extract token from URL
+      const getTokenFromUrl = () => {
+        const searchParams = new URLSearchParams(window.location.search);
+        const tokenFromUrl = searchParams.get('token');
+        if(tokenFromUrl){
+          localStorage.setItem('onebox', JSON.stringify(tokenFromUrl))
+          setToken(tokenFromUrl);
+        }
+        
+
+      };
+  
+      // Call the function to extract token from URL when component mounts
+      getTokenFromUrl();
+    }, []);
+
+    console.log("token", token);
+    console.log("authToken", authToken);
+
   return (
     <div className='flex'>
 
@@ -14,15 +46,15 @@ const Home = () => {
 
       {/* main */}
 
-      <div className='bg-black h-760'>
+      <div className='h-760 '>
 
         <div className={`w-1383 h-64 bg-navigationBackgroundColor pt-21 pb-21 pl-33 `}>
           <Navigation />
         </div>
 
-        <div className={`w-1383`}>
+        {/* <div className={`w-1383`}>
           <InboxContent />
-        </div>
+        </div> */}
       </div>
     </div>
   )
