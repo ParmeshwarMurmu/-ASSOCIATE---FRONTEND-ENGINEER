@@ -25,7 +25,8 @@ module.exports = {
       searchContainerBackgroundColor: '#23272C',
       newRepliesBackgroundColor: '#222426',
       twentySixTextColor: '#5C7CFA',
-      newRepliesTextColor: '#E6E6E6'
+      newRepliesTextColor: '#E6E6E6',
+      detailsTextColor: '#B9B9B9'
     },
 
     fontFamily: {
@@ -46,6 +47,7 @@ module.exports = {
 
       lineHeight: {
         '31': '31px',
+        '14': '14.52px',
         '26': '26.1px',
         '21': '21.7px',
         '24': '24.8px',
@@ -55,7 +57,8 @@ module.exports = {
         '27': '27.4px',
         '28': '27.24px',
         '19': '19.07px',
-        '20': '20px'
+        '20': '20px',
+        '16': '16.94px'
 
       },
       fontSize: {
@@ -84,9 +87,12 @@ module.exports = {
         '17': '17px',
         '80': '80px',
         '2': '2px',
+        '8': '8px'
        
       },
       width: {
+        '268': '268px',
+
         '289': '289px',
         '380': '380px',
         '145': '145px',
@@ -148,6 +154,7 @@ module.exports = {
         '663': '663px',
         '19': '19px',
         '760': '760px',
+        '36': '36px',
         '22': '22px',
         '16': '16px',
         '6': '6.17px',
@@ -196,15 +203,18 @@ module.exports = {
         '3': '3px',
         '22': '22px',
         '1': '1px',
+        '7': '7px',
+        '68': '68px',
         '142': '142px',
         '274': '274px',
         '276': '276.14px',
         '149': '149.65px',
         '122': '122px',
         '17': '17px',
+        '5': '5px',
+        '15': '15px',
         '50': '35px',
         '14': '14px',
-        '15': '15px',
         '10': '10px',
         '32': '32px',
         '16': '16px',
@@ -212,7 +222,8 @@ module.exports = {
         '63': '63px',
         '23': '23px',
         '11': '11.5px',
-        '7': '7px',
+        '20': '20px'
+      
      
         
        
@@ -241,6 +252,8 @@ module.exports = {
         '8': '8px',
         '12': '12px',
         '15': '15px',
+        '14': '14px',
+        '27': '27px'
 
 
       },

@@ -7,6 +7,7 @@ import searchIcon from '../Assets/Search Icon.png'
 import newestFirtArrow from '../Assets/Newset Firts down Arrow.png'
 
 import { Tooltip, IconButton } from '@chakra-ui/react';
+import RightContainer from './RightContainer';
 
 const AllInbox = () => {
     return (
@@ -127,7 +128,7 @@ const AllInbox = () => {
 
             {/* right container */}
             <div className={`w-278 ${style.contentBorder}`}>
-
+                  <RightContainer />
             </div>
 
         </div>
