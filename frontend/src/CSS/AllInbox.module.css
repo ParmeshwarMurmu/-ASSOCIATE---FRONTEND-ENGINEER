@@ -9,3 +9,7 @@
 .inputBorder{
     border: 1px solid white;
 }
+
+.stepsBorder{
+    border-right: 1px solid #403F3F;
+}

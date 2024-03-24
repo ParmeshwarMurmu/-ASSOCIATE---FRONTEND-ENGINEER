@@ -1,6 +1,8 @@
 import React from 'react'
 import sendEmail from '../Assets/Send email.png';
-import sendLogo from '../Assets/send.png'
+import sendLogo from '../Assets/send.png';
+import yellowInbox from '../Assets/yellow inbox.png';
+import style from '../CSS/AllInbox.module.css'
 
 const RightContainer = () => {
     return (
@@ -55,54 +57,94 @@ const RightContainer = () => {
 
             {/* Campaign Name */}
 
-            <div>
-                <p>Campaign Name</p>
+            <div className={`mt-16 ml-10 mr-10 pt-13 pl-30`}>
+                <p className={`mb-20 font-openSans font-semibold text-white text-15 leading-21`}>Campaign Name</p>
 
-                <div>
+                <div className={`mb-16 flex`}>
 
-                    <p>3 Steps</p>
-                    <p>5 Days in Sequence</p>
+                    <p className={`font-openSans font-semibold text-12 leading text-white pr-8 ${style.stepsBorder}`}> <span className={`font-semibold pr-1`}>3</span>Steps</p>
+                    <p className={`font-openSans font-semibold text-12 leading text-white ml-8`}> <span className={`font-normal`}>5</span>Days in Sequence</p>
                 </div>
 
                 {/* setUp Emails */}
-                <div>
+                <div className={``}>
 
-                    <div>
-                        <img src="" alt="" />
+                    <div className={`mb-32 flex`}>
+
+                    
+                    <div className={`p-7 rounded-47 mt-9 mb-9  bg-searchContainerBackgroundColor`}> 
+                        <img src={sendEmail} alt='sendEmail' />
                     </div>
 
-                    <div>
-                        <p>Step 1: Email</p>
-                        <div>
-                            <img src="" alt="" />
-                            <p>
-                                <span>Sent</span>
+                    <div className={`ml-16 `}>
+                        <p className={`font-openSans text-13 leading-17 text-white font-semibold`}>Step 1: Email</p>
+                        <div className={`flex justify-center `}>
+                            <img src={sendLogo} alt={'send logo'} />
+                            <p className={`p-1 font-inter text-10 leading-23 text-detailsTextColor font-normal`}>
+                                    Sent
+                                <span className={`pl-1`}>
+
                                 3rd, Feb
+                                </span>
                             </p>
                         </div>
                     </div>
 
-                    <div>
-                        <p>Step 2: Email</p>
-                        <div>
-                            <img src="" alt="" />
-                            <p>
-                                <span>Opened</span>
+                    </div>
+
+                    {/* 888 */}
+
+                    <div className={`mb-32 flex `}>
+
+                    
+                    <div className={`p-7 rounded-47 mt-9 mb-9  bg-searchContainerBackgroundColor`}> 
+                        <img src={sendEmail} alt='sendEmail' />
+                    </div>
+
+                    <div className={`ml-16 `}>
+                        <p className={`font-openSans text-13 leading-17 text-white font-semibold`}>Step 1: Email</p>
+                        <div className={`flex justify-center mt-4  `}>
+                            <img src={yellowInbox} alt={'yellow inbox'} className={`w-16 h-16 mt-1`} />
+                            <p className={`p-1 font-inter text-10 leading-23 text-detailsTextColor font-normal`}>
+                                Opened
+                                <span className={`pl-1`}>
+
                                 5th, Feb
+                                </span>
                             </p>
                         </div>
                     </div>
 
-                    <div>
-                        <p>Step 3: Email</p>
-                        <div>
-                            <img src="" alt="" />
-                            <p>
-                                <span>Opened</span>
+                    </div>
+                     
+
+                     {/* 00 */}
+
+
+                     <div className={`mb-32 flex`}>
+
+                    
+                    <div className={`p-7 rounded-47 mt-9 mb-9  bg-searchContainerBackgroundColor`}> 
+                        <img src={sendEmail} alt='sendEmail' />
+                    </div>
+
+                    <div className={`ml-16 `}>
+                        <p className={`font-openSans text-13 leading-17 text-white font-semibold`}>Step 1: Email</p>
+                        <div className={`flex justify-center mt-4 `}>
+                            <img src={yellowInbox} alt={'yellow inbox'} className={`w-16 h-16 mt-1`} />
+                            <p className={`p-1 font-inter text-10 leading-23 text-detailsTextColor font-normal`}>
+                                    Opened
+                                <span className={`pl-1`}>
+
                                 5th, Feb
+                                </span>
                             </p>
                         </div>
                     </div>
+
+                    </div>
+                     
+                     
                 </div>
             </div>
 
