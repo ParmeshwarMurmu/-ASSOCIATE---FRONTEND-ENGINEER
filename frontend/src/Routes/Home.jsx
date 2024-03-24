@@ -2,11 +2,13 @@ import React, { useEffect, useState } from 'react'
 import Sidebar from '../Components/Sidebar'
 import Navigation from '../Components/Navigation'
 import InboxContent from '../Components/InboxContent';
-import { useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom';
+import { useDispatch, shallowEqual, useSelector } from 'react-redux';
 
 
 const Home = ({children}) => {
   let { onebox } = useParams();
+  
 
   console.log(onebox, "onebox")
   
@@ -14,7 +16,13 @@ const Home = ({children}) => {
     // State to hold the token
     const [token, setToken] = useState('');
     
-    let authToken = JSON.parse(localStorage.getItem('onebox'))
+    let authToken = JSON.parse(localStorage.getItem('onebox'));
+
+    const { theme } = useSelector((store) => {
+      return {
+          theme: store.ThemeReducer.theme,
+      }
+  }, shallowEqual)
 
     useEffect(() => {
       // Function to extract token from URL
@@ -48,7 +56,7 @@ const Home = ({children}) => {
 
       <div className='h-760 '>
 
-        <div className={`w-1383 h-64 bg-navigationBackgroundColor pt-21 pb-21 pl-33 `}>
+        <div className={`w-1383 h-64 ${theme==='darkTheme' ? 'bg-navigationBackgroundColor' : 'bg-white' }  pt-21 pb-21 pl-33 `}>
           <Navigation />
         </div>
 

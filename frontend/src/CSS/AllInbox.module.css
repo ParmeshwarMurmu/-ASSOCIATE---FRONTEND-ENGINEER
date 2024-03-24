@@ -1,0 +1,11 @@
+.contBorder{
+    border: 2px solid red;
+}
+
+.contentBorder{
+    border: 2px solid rgb(204, 255, 17);
+}
+
+.inputBorder{
+    border: 1px solid white;
+}

@@ -14,6 +14,7 @@ import { Tooltip } from '@chakra-ui/react';
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react'
 import InboxContent from './InboxContent';
 import { Link } from 'react-router-dom';
+import AllInbox from './AllInbox';
 
 
 const Sidebar = () => {
@@ -84,8 +85,8 @@ const Sidebar = () => {
                                 <TabPanel className={`w-1383 ${style.cont}`}>
                                     <p>one!</p>
                                 </TabPanel>
-                                <TabPanel className={`w-1383 bg-black `}>
-                                    <p>two!</p>
+                                <TabPanel className={`w-1383 h-696 relative bg-black ${style.cont}`}>
+                                   <AllInbox />
                                 </TabPanel>
 
 
