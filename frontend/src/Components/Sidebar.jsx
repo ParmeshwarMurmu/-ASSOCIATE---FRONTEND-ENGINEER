@@ -15,9 +15,18 @@ import { Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react'
 import InboxContent from './InboxContent';
 import { Link } from 'react-router-dom';
 import AllInbox from './AllInbox';
+import { useDispatch, shallowEqual, useSelector } from 'react-redux';
 
 
 const Sidebar = () => {
+
+    const { theme } = useSelector((store) => {
+        return {
+            theme: store.ThemeReducer.theme,
+        }
+    }, shallowEqual)
+
+
     return (
         <div className='relative'>
 
@@ -30,14 +39,14 @@ const Sidebar = () => {
                 />
             </div>
 
-            <div className={`w-48 h-634 ml-1 mr-1  ${style.cont}`}>
+            <div className={`w-48 h-634 ml-1 mr-1 }`}>
 
-                <div className={`bg-black h-546 w-28 mt-49 ml-10 mr-10 ${style.cont} `}>
+                <div className={` ${theme === 'darkTheme' ? 'bg-sideBarBackgroundColor' : 'bg-sidebarLightThemeBackgroundColor'} h-546 w-28 mt-49 ml-10 mr-10 ${style.cont} `}>
 
-                    <Tabs variant='none' className={`w-28 h-546 ${style.cont}`}>
+                    <Tabs variant='none' className={`w-28 h-546 `}>
                         <Flex>
                             <TabList style={{ 'flexDirection': 'column' }} >
-                                <Tab className='h-28 w-28' _selected={{ height: '28px', width: '28px', color: 'white', bg: 'blue.500' }} variant={'none'}>
+                                <Tab className='h-28 w-28' _selected={{ height: '28px',paddingRight: '12px', width: '28px', color: 'white', bg: '#2F3030' }} variant={'none'}>
                                     <Tooltip label='Home' placement='right'>
                                         <IconButton
                                             // className='w-28 h-28 mb-32'
@@ -48,7 +57,7 @@ const Sidebar = () => {
                                         />
                                     </Tooltip>
                                 </Tab>
-                                <Tab className='h-28 w-28 mt-32' variant={'none'}>
+                                <Tab className='h-28 w-28 mt-32' _selected={{ height: '28px',paddingRight: '6px', width: '28px', color: 'white', bg: '#2F3030' }} variant={'none'}>
                                     <Tooltip label='Search' placement='right'>
                                         <IconButton
                                             // className='w-28 h-28 mb-32'
@@ -60,12 +69,61 @@ const Sidebar = () => {
                                     </Tooltip>
                                 </Tab>
 
-                                <Tab className='h-28 w-28 mt-32' variant={'none'}>
-                                    <Tooltip label='Onebox' placement='right'>
-                                        <Link to={'/onebox'}><IconButton
+                                <Tab className='h-28 w-28 mt-32' _selected={{ height: '28px',paddingRight: '6px', width: '28px', color: 'white', bg: '#2F3030' }} variant={'none'}>
+                                <Tooltip label='Email Accounts' placement='right'>
+                                        <Link to={''}><IconButton
                                             // className='w-28 h-28 mb-32'
                                             variant={'none'}
+                                            // className={`${theme === 'darkTheme' ? 'bg-sideBarBackgroundColor' : ''}`}
+                                            icon={<img src={email} alt="email" className='mr-10' />}
+
+                                        /></Link>
+                                    </Tooltip>
+                                </Tab>
+
+                                <Tab className='h-28 w-28 mt-32' _selected={{ height: '28px',paddingRight: '6px', width: '28px', color: 'white', bg: '#2F3030' }} variant={'none'}>
+                                <Tooltip label='Campaigns' placement='right'>
+                                        <Link to={''}><IconButton
+                                            // className='w-28 h-28 mb-32'
+                                            variant={'none'}
+                                            // className={`${theme === 'darkTheme' ? 'bg-sideBarBackgroundColor' : ''}`}
+                                            icon={<img src={sendMessage} alt="sendMessage" className='mr-10' />}
+
+                                        /></Link>
+                                    </Tooltip>
+                                </Tab>
+
+                                <Tab className='h-28 w-28 mt-32' _selected={{ height: '28px',paddingRight: '6px', width: '28px', color: 'white', bg: '#2F3030' }} variant={'none'}>
+                                <Tooltip label='Lead List' placement='right'>
+                                        <Link to={''}><IconButton
+                                            // className='w-28 h-28 mb-32'
+                                            variant={'none'}
+                                            // className={`${theme === 'darkTheme' ? 'bg-sideBarBackgroundColor' : ''}`}
+                                            icon={<img src={dashboard} alt="dashboard" className='mr-10' />}
+
+                                        /></Link>
+                                    </Tooltip>
+                                </Tab>
+
+                                <Tab className='h-28 w-28 mt-32' _selected={{ height: '28px',paddingRight: '6px', width: '28px', color: 'white', bg: '#2F3030' }} variant={'none'}>
+                                    <Tooltip label='Onebox' placement='right'>
+                                        <Link to={''}><IconButton
+                                            // className='w-28 h-28 mb-32'
+                                            variant={'none'}
+                                            // className={`${theme === 'darkTheme' ? 'bg-sideBarBackgroundColor' : ''}`}
                                             icon={<img src={menuContainer} alt="menuContainer" className='mr-10' />}
+
+                                        /></Link>
+                                    </Tooltip>
+                                </Tab>
+
+                                <Tab className='h-28 w-28 mt-32' _selected={{ height: '28px',paddingRight: '6px', width: '28px', color: 'white', bg: '#2F3030' }} variant={'none'}>
+                                <Tooltip label='Analytics' placement='right'>
+                                        <Link to={''}><IconButton
+                                            // className='w-28 h-28 mb-32'
+                                            variant={'none'}
+                                            // className={`${theme === 'darkTheme' ? 'bg-sideBarBackgroundColor' : ''}`}
+                                            icon={<img src={barChart} alt="barChart" className='mr-10' />}
 
                                         /></Link>
                                     </Tooltip>
@@ -82,10 +140,10 @@ const Sidebar = () => {
                                 <TabPanel backgroundColor={'black'} className={`w-1383`}>
                                     <InboxContent />
                                 </TabPanel>
-                                <TabPanel className={`w-1383 ${style.cont}`}>
+                                <TabPanel className={`w-1383 `}>
                                     <p>one!</p>
                                 </TabPanel>
-                                <TabPanel className={`w-1383 h-696 relative bg-black ${style.cont}`}>
+                                <TabPanel className={`w-1383 h-696 relative ${theme==='darkTheme' ? 'bg-black' : 'bg-white' } `}>
                                    <AllInbox />
                                 </TabPanel>
 

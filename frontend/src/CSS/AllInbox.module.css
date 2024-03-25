@@ -1,15 +1,45 @@
+.replyHeader{
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16.34px;
+}
+
+.sendButtonBg{
+    background: linear-gradient(91.73deg, #4B63DD -2.99%, rgba(5, 36, 191, 0.99) 95.8%);
+}
+
+.replyborder{
+    border-bottom: 1px solid #34383D
+}
 .contBorder{
-    border: 2px solid red;
+    /* border: 4px solid red; */
 }
 
 .contentBorder{
-    border: 2px solid rgb(204, 255, 17);
+    /* border: 2px solid rgb(204, 255, 17); */
+}
+
+.messageBodyContainer{
+    border: 1px solid #343A40;
 }
 
 .inputBorder{
-    border: 1px solid white;
+    /* border: 1px solid rgb(17, 54, 223); */
 }
 
 .stepsBorder{
     border-right: 1px solid #403F3F;
+}
+
+.today{
+    border: 1px solid #171819;
+}
+
+.allMailContainer{
+    /* border: 1px solid #07b8e4; */
+}
+
+.replyBtn{
+    background: linear-gradient(91.73deg, #4B63DD -2.99%, rgba(5, 36, 191, 0.99) 95.8%);
+
 }

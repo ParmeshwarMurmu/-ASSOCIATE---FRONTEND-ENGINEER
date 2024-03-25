@@ -4,22 +4,27 @@ import { FcGoogle } from "react-icons/fc";
 import { Button, ButtonGroup } from '@chakra-ui/react'
 import logo from '../Assets/Logo.png'
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom'
 
 
 const Login = () => {
+
+    const navigate = useNavigate()
     
     const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImVtYWlsIjoibXVybXVwYXJtZXNod2FyMDVAZ21haWwuY29tIiwiaWQiOjgsImZpcnN0TmFtZSI6IlBhcm1lc2h3YXIiLCJsYXN0TmFtZSI6Ik11cm11In0sImlhdCI6MTcxMTE3ODkxMywiZXhwIjoxNzQyNzE0OTEzfQ.P_fFmshplrW9nfPcUxC_olAv1nz0IauEnSpZNq4CCQk'
 
     // Function to handle loging through google
     const signUpUsingGoogleHandler = ()=>{
         // alert('google')
-        axios.get(`https://hiring.reachinbox.xyz/api/v1/auth/google-login?redirect_to=https://localhost:3000/`)
-        .then((res)=>{
-            console.log(res);
-        })
-        .catch((err)=>{
-            console.log(err);
-        })
+        // axios.get(`https://hiring.reachinbox.xyz/api/v1/auth/google-login?redirect_to=http://localhost:3000/`)
+        // .then((res)=>{
+        //     console.log(res);
+        // })
+        // .catch((err)=>{
+        //     console.log(err);
+        // })
+
+        navigate('/home')
 
     }
     return (

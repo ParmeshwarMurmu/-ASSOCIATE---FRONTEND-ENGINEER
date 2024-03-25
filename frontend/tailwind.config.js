@@ -23,16 +23,38 @@ module.exports = {
       allInboxsTextColor: '#4285F4',
       inboxSelectedTextColor: '#7F7F7F',
       searchContainerBackgroundColor: '#23272C',
+      searchContainerThemeBackgroundColor: '#EEF1F4',
       newRepliesBackgroundColor: '#222426',
       twentySixTextColor: '#5C7CFA',
       newRepliesTextColor: '#E6E6E6',
-      detailsTextColor: '#B9B9B9'
+      detailsTextColor: '#B9B9B9',
+      bodyMessageColor: '#E1E0E0',
+      bodyMessageBackgroundColor: '#141517',
+      emailDetailsTextColor: '#AEAEAE',
+      emailDateTimeTextColor: '#7F7F7F',
+      newProductTextColor: '#F8FAFC',
+      mettingCompltedTextColor: '#D3D7DB',
+      todayBackgroundColor: '#171819',
+      replyTextColor: '#BAB9BD',
+      replyOtherTextColor: '#E7E7E7',
+      replyMessageBodyTextColor: '#636970',
+      replyMessageBodyThemeTextColor: '#172B4D',
+      sidebarLightThemeBackgroundColor: '#FAFAFA',
+      lightThemeIconClor:'#919EAB',
+      newProductLaunchThemeBckground:'#F9F9F9',
+      newProductLaunchThemeTextColor:'#637381',
+      leadDeailsthemeBackgroundColor:'#ECEFF3',
+      leadDetailsThemeTextColor: '#454F5B'
+      
     },
 
+    // 
     fontFamily: {
       openSans: 'Open Sans',
       DMSans: 'DM Sans',
-      inter: 'Inter'
+      inter: 'Inter',
+      SFPro: 'SF Pro',
+      sfPro: 'SF Pro'
     },
 
     borderWidth: {
@@ -61,7 +83,11 @@ module.exports = {
         '16': '16.94px',
         '17': '17.7px',
         '23': '18px',
-        '34': '16.34px'
+        '34': '16.34px',
+        '33': '16.71px',
+        '41': '18px',
+        '71': '13.62px'
+        
 
       },
       fontSize: {
@@ -81,7 +107,12 @@ module.exports = {
         '57': '32px',
         '65': '-68px',
          '66': '0px',
-         '67': '0px'
+         '67': '0px',
+         '35': '-160px',
+         '36': '269px',
+         '20': '-30px',
+         
+
 
 
 
@@ -99,8 +130,10 @@ module.exports = {
        
       },
       width: {
+        '24': '24px',
+        '114': '114px',
         '268': '268px',
-
+         '9': '9.6px',
         '289': '289px',
         '380': '380px',
         '145': '145px',
@@ -108,6 +141,8 @@ module.exports = {
         '23': '23.5px',
         '195': '195px',
         '248': '248px',
+        '210': '210px',
+        '95': '95px',
         '10': '10px',
         '1440': '1440px',
         '156': '156.77px',
@@ -115,8 +150,9 @@ module.exports = {
         '56': '56px',
         '79': '100px',
         '1383': '1465px',
+        '136': '136px',
         '127': '127px',
-        '210': '210px',
+        '481': '481px',
         '129': '140px',
         '51': '51px',
         '137': '137px',
@@ -125,15 +161,19 @@ module.exports = {
         '832': '832.3px',
         '280': '280.02px',
         '533': '543px',
+        '33': '33px',
         '48': '48px',
         '28': '28px',
         '32': '32px',
         '34': '45px',
         '278': '278px',
-        '799': '799px',
+        '799': '890px',
         '171': '171px',
         '112': '112px',
-        '151': '151px'
+        '151': '151px',
+        '180': '180px',
+        '146': '146.56px',
+        '50': '50.36px'
        
 
 
@@ -148,22 +188,25 @@ module.exports = {
 
       },
       height: {
+        '22': '22px',
         '54': '54px',
         '13': '13.2px',
         '31': '31px',
         '27': '27px',
+        '40': '40px',
         '21': '21px',
         '32': '32px',
         '48': '48px',
         '103': '103px',
         '25': '25px',
+        '38': '38px',
         '64': '64px',
         '24': '24px',
         '663': '663px',
         '19': '19px',
         '760': '760px',
+        '57': '57px',
         '36': '36px',
-        '22': '22px',
         '16': '16px',
         '6': '6.17px',
         '693': '696px',
@@ -181,7 +224,10 @@ module.exports = {
         '17': '17px',
         '26': '26px',
         '23': '23px',
-        '76': '76px'
+        '76': '76px',
+        '33': '33px',
+        '12': '12px',
+        
         
        
 
@@ -195,6 +241,7 @@ module.exports = {
 
       },
       margin: {
+        '25': '25px',
         '40': '40px',
         '24': '24px',
         '8': '8px',
@@ -206,6 +253,7 @@ module.exports = {
         '4': '4px',
         '66': '66px',
         '19': '19px',
+        '47': '22px',
         '1154': '1154px',
         '21': '21px',
         '3': '3px',
@@ -220,18 +268,24 @@ module.exports = {
         '122': '122px',
         '17': '17px',
         '5': '5px',
+        '269': '222px',
         '15': '15px',
         '50': '35px',
         '14': '14px',
         '10': '10px',
         '32': '32px',
         '16': '16px',
+        '241': '241px',
         '6': '6.91px',
         '9': '6.31px',
         '63': '63px',
         '23': '23px',
         '11': '11.5px',
-        '20': '20px'
+        '20': '20px',
+        '18': '18px',
+        '47': '18.5px',
+        
+
       
      
         
@@ -261,11 +315,17 @@ module.exports = {
         '122': '122px',
         '8': '8px',
         '12': '12px',
+        '16': '16px',
         '15': '15px',
         '14': '14px',
         '27': '27px',
         '30': '20.33px',
-        
+        '81': '6px',
+        '40': '40px',
+        '24': '24px',
+        '32': '32px',
+        '11': '11px',
+        '41': '7px'
 
 
       },

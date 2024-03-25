@@ -8,13 +8,15 @@ import newestFirtArrow from '../Assets/Newset Firts down Arrow.png'
 
 import { Tooltip, IconButton } from '@chakra-ui/react';
 import RightContainer from './RightContainer';
+import MiddleContainer from './MiddleContainer';
+import AllMailsContainer from './AllMailsContainer';
 
 const AllInbox = () => {
     return (
-        <div className={`h-696 flex ${style.contBorder} absolute top-67 left-66 pl-15`}>
+        <div className={`h-696 flex absolute top-67 left-66 pl-15`}>
 
             {/* left container */}
-            <div className={`w-278 h-696 ${style.contentBorder}`}>
+            <div className={`w-278 h-696 `}>
 
 
                 {/* All Inboxs container */}
@@ -112,22 +114,22 @@ const AllInbox = () => {
 
                 </div>
 
-                {/* Main Content All Mail inbox */}
+                {/* Main Content All Mail inbox All Mails */}
 
                 <div>
-                    
+                    <AllMailsContainer />
                 </div>
 
 
             </div>
 
             {/* middle container */}
-            <div className={`w-799 ${style.contentBorder}`}>
-
+            <div className={`w-799`}>
+                {/* <MiddleContainer /> */}
             </div>
 
             {/* right container */}
-            <div className={`w-278 ${style.contentBorder}`}>
+            <div className={`w-278 `}>
                   <RightContainer />
             </div>
 

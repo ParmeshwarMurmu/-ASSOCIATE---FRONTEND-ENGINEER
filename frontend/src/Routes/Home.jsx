@@ -48,7 +48,7 @@ const Home = ({children}) => {
     <div className='flex'>
 
       {/* sidebar */}
-      <div className={`w-56 h-760 bg-sideBarBackgroundColor border-r-8 border-red-600`}>
+      <div className={`w-56 h-760 ${theme === 'darkTheme' ? 'bg-sideBarBackgroundColor' : 'bg-sidebarLightThemeBackgroundColor'} border-r-8 border-red-600`}>
         <Sidebar />
       </div>
 
@@ -56,7 +56,7 @@ const Home = ({children}) => {
 
       <div className='h-760 '>
 
-        <div className={`w-1383 h-64 ${theme==='darkTheme' ? 'bg-navigationBackgroundColor' : 'bg-white' }  pt-21 pb-21 pl-33 `}>
+        <div className={`w-1383 h-64 ${theme==='darkTheme' ? 'bg-navigationBackgroundColor' : 'bg-leadDeailsthemeBackgroundColor' }  pt-21 pb-21 pl-33 `}>
           <Navigation />
         </div>
 
