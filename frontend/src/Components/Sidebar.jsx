@@ -143,6 +143,15 @@ const Sidebar = () => {
                                 <TabPanel className={`w-1383 `}>
                                     <p>one!</p>
                                 </TabPanel>
+                                <TabPanel className={`w-1383 `}>
+                                    <p>one!</p>
+                                </TabPanel>
+                                <TabPanel className={`w-1383 `}>
+                                    <p>one!</p>
+                                </TabPanel>
+                                <TabPanel className={`w-1383 `}>
+                                    <p>one!</p>
+                                </TabPanel>
                                 <TabPanel className={`w-1383 h-696 relative ${theme==='darkTheme' ? 'bg-black' : 'bg-white' } `}>
                                    <AllInbox />
                                 </TabPanel>
